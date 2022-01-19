@@ -1,9 +1,14 @@
+import { Link } from 'react-router-dom';
+
 export default function Navbar() {
     return(
        <div className="nav">
-           This is the Navbar.
-           <br />
-           The Nav bar allows me to navigate to the Index and New pages
+        <h1>
+            <Link to="/transactions">Budget App</Link>
+        </h1>
+        <button>
+            <Link to="/transactions/new">New Transaction</Link>
+        </button>
        </div> 
     )
 }
