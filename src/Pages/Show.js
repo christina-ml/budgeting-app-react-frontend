@@ -1,3 +1,5 @@
+import TransactionDetails from '../components/TransactionDetails';
+
 export default function Show(){
     return(
         <div>
@@ -6,6 +8,8 @@ export default function Show(){
             This will: Get an individual view (show one transactions)
             <br />
             This will: Delete a transactions
+
+            <TransactionDetails />
         </div>
     )
 }
