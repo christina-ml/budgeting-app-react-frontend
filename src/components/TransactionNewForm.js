@@ -1,6 +1,6 @@
 export default function TransactionNewForm() {
     return(
-        <div>
+        <div className="New">
             This is TransactionNewForm.js
         </div>
     )

@@ -1,5 +1,5 @@
 export default function TransactionEditForm() {
-    <div>
+    <div className="Edit">
         This is TransactionEditForm.js
     </div>
 }

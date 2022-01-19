@@ -1,6 +1,6 @@
 export default function TransactionDetails() {
     return (
-        <div>
+        <div className="Details">
             This is TransactionDetails.js
         </div>
     )

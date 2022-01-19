@@ -1,7 +1,7 @@
 export default function FourOFour() {
     return(
         <div>
-            This is the FourOFour.js page.
+            <h1>404 Page</h1>
         </div>
     )
 }
