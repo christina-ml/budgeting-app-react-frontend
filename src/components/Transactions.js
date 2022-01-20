@@ -36,13 +36,13 @@ export default function Transactions() {
             </div>
             <h3>Transactions</h3>
             <table className="table bg-secondary p2 text-dark bg-opacity-10">
-                <tr>
-                    <th className="text-left col-md-1">Date</th>
-                    <th className="text-left col-md-2">Name</th>
-                    <th className="text-left col-md-2">From</th>
-                    <th className="text-left col-md-2">Category</th>
-                    <th className="text-left col-md-1">Amount</th>
-                </tr>
+                <thead>
+                    <tr>
+                        <th className="text-left col-md-1">Date</th>
+                        <th className="text-left col-md-1">Name</th>
+                        <th className="text-left col-md-1">Amount</th>
+                    </tr>
+                </thead>
             </table>
             <div>
                 {transactions.map((transaction, index)=>{
