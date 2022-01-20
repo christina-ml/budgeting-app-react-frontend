@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
+import colorCode from '../helpers/colorCode';
+
 const API_URL = process.env.REACT_APP_API_URL_FROM_OUR_BACKEND;
 
 export default function Navbar() {
@@ -23,14 +25,38 @@ export default function Navbar() {
         return a + b;
     }, 0);
 
+
+    // function colorCode(findSum) {
+    //     if (findSum > 1000) {
+    //         return (
+    //         <div id="nav-total" className="bg-success p-2 text-white">
+    //             Bank Acct. Total: ${findSum} 
+    //         </div>
+    //         )
+    //     } else if (findSum < 0) {
+    //         return (
+    //         <div id="nav-total" className="bg-danger p-2 text-white">
+    //             Bank Acct. Total: ${findSum} 
+    //         </div>
+    //         )
+    //     } else if (findSum >= 0 && findSum <= 1000) {
+    //         return (
+    //         <div id="nav-total" className="bg-warning p-2 text-white">
+    //             Bank Acct. Total: ${findSum} 
+    //         </div>
+    //         )
+    //     }
+    // }
+
     return(
         <div className="nav">
             <h1 className="me-auto">
                 <Link to="/transactions">Budgeting App</Link>
             </h1>
-            <div id="nav-total">
+            Bank Acct. Total: {colorCode(findSum)}
+            {/* <div id="nav-total">
                 Bank Acct. Total: ${findSum} 
-            </div>
+            </div> */}
             <button>
                 <Link to="/transactions/new">New Transaction</Link>
             </button>
