@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { Simulate } from 'react-dom/cjs/react-dom-test-utils.development';
 
 import Transaction from './Transaction';
 
@@ -32,8 +31,9 @@ export default function Transactions() {
             <div>
                 {/* {console.log("numbers to add array:", numbersToAddArray)}
                 {console.log("this is to find the sum: ", findSum)} */}
-                <h2>Bank Account Total: ${findSum}</h2>
+                <h1>Your Bank Account Total: ${findSum}</h1>
             </div>
+            <h3>Transactions</h3>
             <div>
                 {transactions.map((transaction, index)=>{
                     // console.log("in the map:", transaction, "index:", index)

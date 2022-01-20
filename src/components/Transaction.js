@@ -1,13 +1,17 @@
 export default function Transaction({ index, transaction }) {
     return(
         <div className="Transaction">
-            <h3>Transaction</h3>
-            <div>
-                {`index: ${index}`}
-                {`Transaction Name: ${transaction.name}`}
-                <hr></hr>
-            </div>
-
+            <table className="table">
+                <tr>
+                    <td>{`Date: ${transaction.date}`}</td>
+                    <td>{`From: ${transaction.from}`}</td>
+                    <td>{`Name: ${transaction.name}`}</td>
+                    <td>{`Category: ${transaction.category}`}</td>
+                    <td>{`$${transaction.amount}`}</td>
+                </tr>
+            </table>
+            {/* {`index: ${index}`} */}
+            <hr></hr>
         </div>
     )
 }
