@@ -1,4 +1,4 @@
-export default function colorCode(findSum) {
+export default function colorCodeDiv(findSum) {
     if (findSum > 1000) {
         return (
         <div id="nav-total" className="bg-success p-2 text-white">

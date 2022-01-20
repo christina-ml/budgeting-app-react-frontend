@@ -5,7 +5,7 @@ import axios from 'axios';
 import { Button } from 'react-bootstrap';
 
 // helpers
-import colorCode from '../helpers/colorCode';
+import colorCodeDiv from '../helpers/colorCodeDiv';
 
 const API_URL = process.env.REACT_APP_API_URL_FROM_OUR_BACKEND;
 
@@ -34,7 +34,7 @@ export default function Navbar() {
                 <Link to="/transactions" style={{textDecoration: "none"}}>Budgeting App</Link>
             </h1>
             <div className="me-auto d-flex justify-content-between align-items-baseline fw-normal mb-3">
-                <span>Bank Acct. Total:</span>{colorCode(findSum)}
+                <span>Bank Acct. Total:</span>{colorCodeDiv(findSum)}
             </div>
             <Link to="/transactions/new">
                 <Button variant="primary">New Transaction</Button>

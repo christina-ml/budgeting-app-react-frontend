@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 import Transaction from './Transaction';
-import colorCode from '../helpers/colorCode';
+import colorCodeSpan from '../helpers/colorCodeSpan';
 
 const API_URL = process.env.REACT_APP_API_URL_FROM_OUR_BACKEND;
 console.log("API_URL:", API_URL);
@@ -32,7 +32,7 @@ export default function Transactions() {
             <div>
                 {/* {console.log("numbers to add array:", numbersToAddArray)}
                 {console.log("this is to find the sum: ", findSum)} */}
-                <h1>Your Bank Account Total: {colorCode(findSum)}</h1>
+                <h1>Your Bank Account Total: {colorCodeSpan(findSum)}</h1>
             </div>
             <h3>Transactions</h3>
             <table className="table bg-secondary p2 text-dark bg-opacity-10">

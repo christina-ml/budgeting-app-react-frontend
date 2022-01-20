@@ -1,5 +1,7 @@
 // helpers
-import colorCodeItem from "../helpers/colorCodeItem"
+import colorCodeTD from "../helpers/colorCodeTD"
+import colorCodeSpan from "../helpers/colorCodeSpan"
+import colorCodeDiv from "../helpers/colorCodeDiv"
 
 export default function Transaction({ index, transaction }) {
     return(
@@ -13,7 +15,7 @@ export default function Transaction({ index, transaction }) {
                                 {transaction.name}
                             </a>
                         </td>
-                        {colorCodeItem(transaction)}
+                        {colorCodeTD(transaction)}
                     </tr>
                 </tbody>
             </table>
