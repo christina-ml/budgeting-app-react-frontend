@@ -35,7 +35,7 @@ export default function Transactions() {
                 <h1>Your Bank Account Total: {colorCode(findSum)}</h1>
             </div>
             <h3>Transactions</h3>
-            <table className="table bg-secondary p2 text-dark bg-opacity-25">
+            <table className="table bg-secondary p2 text-dark bg-opacity-10">
                 <tr>
                     <th className="text-left col-md-1">Date</th>
                     <th className="text-left col-md-2">Name</th>
