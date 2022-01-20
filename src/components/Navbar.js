@@ -25,7 +25,7 @@ export default function Navbar() {
 
     return(
         <div className="nav">
-            <h1>
+            <h1 className="me-auto">
                 <Link to="/transactions">Budgeting App</Link>
             </h1>
             <div id="nav-total">

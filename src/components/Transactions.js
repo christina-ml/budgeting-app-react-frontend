@@ -34,6 +34,15 @@ export default function Transactions() {
                 <h1>Your Bank Account Total: ${findSum}</h1>
             </div>
             <h3>Transactions</h3>
+            <table className="table">
+                <tr>
+                    <th className="text-left col-md-1">Date</th>
+                    <th className="text-left col-md-2">Name</th>
+                    <th className="text-left col-md-2">From</th>
+                    <th className="text-left col-md-2">Category</th>
+                    <th className="text-left col-md-1">Amount</th>
+                </tr>
+            </table>
             <div>
                 {transactions.map((transaction, index)=>{
                     // console.log("in the map:", transaction, "index:", index)
