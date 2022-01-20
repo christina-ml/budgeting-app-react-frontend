@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
+import { Button } from 'react-bootstrap';
+
 // helpers
 import colorCode from '../helpers/colorCode';
 
@@ -28,15 +30,15 @@ export default function Navbar() {
 
     return(
         <div className="nav">
-            <h1 className="me-auto">
-                <Link to="/transactions">Budgeting App</Link>
+            <h1 className="me-auto b">
+                <Link to="/transactions" style={{textDecoration: "none"}}>Budgeting App</Link>
             </h1>
-            <div>
-                Bank Acct. Total: {colorCode(findSum)}
+            <div className="me-auto d-flex justify-content-between align-items-baseline fw-normal mb-3">
+                <span>Bank Acct. Total:</span>{colorCode(findSum)}
             </div>
-            <button>
-                <Link to="/transactions/new">New Transaction</Link>
-            </button>
+            <Link to="/transactions/new">
+                <Button variant="primary">New Transaction</Button>
+            </Link>
         </div> 
     )
 }

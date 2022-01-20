@@ -1,3 +1,4 @@
+// helpers
 import colorCodeItem from "../helpers/colorCodeItem"
 
 export default function Transaction({ index, transaction }) {
