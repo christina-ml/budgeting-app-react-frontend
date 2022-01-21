@@ -19,10 +19,14 @@ export default function Transactions() {
         }, []);
 
     /* Find the Bank Account Total (sum of transaction.amount) */
-    const numbersToAddArray = transactions.map((transaction)=>{
+    const numbersToAddArray = transactions.map((transaction, index)=>{
+        // console.log("mapindex:", index);
+        // console.log(">>???", transaction.amount)
         return transaction.amount;
     })
     const findSum = numbersToAddArray.reduce(function(a, b){
+        // console.log("reduceA:", a)
+        // console.log("reduceB:", b)
         return a + b;
     }, 0);
 
