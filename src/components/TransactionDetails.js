@@ -19,6 +19,15 @@ export default function TransactionDetails() {
             })
     }, []);
 
+    const handleDelete = () => {
+        axios.delete(`${process.env.REACT_APP_API_URL_FROM_OUR_BACKEND}/transactions/${id}`)
+            .then((res)=>{
+                navigate(`/transactions`);
+            }).catch((err)=>{
+                console.log(err);
+            })
+    }
+    
     return (
         <div className="Details">
             <div>
@@ -35,7 +44,7 @@ export default function TransactionDetails() {
                 <button>Edit</button>
             </Link>
             <div>
-                <button>Delete</button>
+                <button onClick={handleDelete}>Delete</button>
             </div>
         </div>
     )

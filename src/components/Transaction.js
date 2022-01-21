@@ -1,7 +1,5 @@
 // helpers
 import colorCodeTD from "../helpers/colorCodeTD"
-import colorCodeSpan from "../helpers/colorCodeSpan"
-import colorCodeDiv from "../helpers/colorCodeDiv"
 
 export default function Transaction({ index, transaction }) {
     return(

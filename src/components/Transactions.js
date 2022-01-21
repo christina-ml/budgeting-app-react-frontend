@@ -18,7 +18,6 @@ export default function Transactions() {
             })
         }, []);
 
-
     /* Find the Bank Account Total (sum of transaction.amount) */
     const numbersToAddArray = transactions.map((transaction)=>{
         return transaction.amount;
