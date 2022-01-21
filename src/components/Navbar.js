@@ -25,7 +25,7 @@ export default function Navbar() {
         return transaction.amount;
     })
     const findSum = numbersToAddArray.reduce(function(a, b){
-        return a + b;
+        return a + Number(b);
     }, 0);
 
     return(

@@ -35,7 +35,7 @@ export default function Transactions() {
             <div>
                 {/* {console.log("numbers to add array:", numbersToAddArray)}
                 {console.log("this is to find the sum: ", findSum)} */}
-                <h1>Your Bank Account Total: {colorCodeSpan(findSum)}</h1>
+                <h1>Current Balance: {colorCodeSpan(findSum)}</h1>
             </div>
             <h3>Transactions</h3>
             <table className="table bg-secondary p2 text-dark bg-opacity-10">
