@@ -51,7 +51,9 @@ export default function TransactionNewForm() {
                     placeholder="Date"
                 />
                 </div>
-                <label htmlFor="name" className="col-sm-1 col-form-label">Name:</label>
+                <label htmlFor="name" className="col-sm-1 col-form-label">Name:
+                <span style={{color: "red"}}>*</span>
+                </label>
                 <div className="col-sm-11">
                     <input 
                         id="name"
@@ -59,6 +61,7 @@ export default function TransactionNewForm() {
                         type="text"
                         onChange={handleTextChange}
                         placeholder="Name"
+                        required
                     />
                 </div>
                 <label htmlFor="from" className="col-sm-1 col-form-label">From:</label>
