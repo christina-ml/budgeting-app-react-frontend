@@ -10,6 +10,7 @@ export default function TransactionDetails() {
     let { id } = useParams();
     let navigate = useNavigate();
 
+    // `/transactions/:id` SHOW (same url also for: DELETE, UPDATE-PUT)
     useEffect(()=>{
         axios.get(`${process.env.REACT_APP_API_URL_FROM_OUR_BACKEND}/transactions/${id}`)
             .then((res)=>{
@@ -19,6 +20,7 @@ export default function TransactionDetails() {
             })
     }, []);
 
+    // `/transactions/:id` DELETE
     const handleDelete = () => {
         axios.delete(`${process.env.REACT_APP_API_URL_FROM_OUR_BACKEND}/transactions/${id}`)
             .then((res)=>{
