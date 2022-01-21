@@ -2,6 +2,11 @@
   background: #94ddd3;
 }
 
+#home-photo-container {
+  height: 300px;
+  overflow: auto;
+}
+
 #home-photo {
-  width: 100vw;
+  width: 98vw;
 }
