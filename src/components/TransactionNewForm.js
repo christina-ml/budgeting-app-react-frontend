@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams, Link } from 'react-router-dom';
 
 export default function TransactionNewForm() {
     const { id } = useParams();
@@ -90,6 +90,9 @@ export default function TransactionNewForm() {
                     <input type="submit" />   
                 </div>
             </form>
+            <Link to={`/transactions`}>
+                <button>Back</button>
+            </Link>
         </div>
     )
 }
