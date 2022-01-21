@@ -13,7 +13,7 @@ export default function Transaction({ index, transaction }) {
                                 {transaction.name}
                             </a>
                         </td>
-                        {colorCodeTD(transaction)}
+                        {colorCodeTD(transaction, index)}
                     </tr>
                 </tbody>
             </table>

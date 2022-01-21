@@ -50,7 +50,9 @@ export default function Transactions() {
             <div>
                 {transactions.map((transaction, index)=>{
                     // console.log("in the map:", transaction, "index:", index)
-                    return <Transaction key={index} transaction={transaction} index={index} />
+                    return (
+                        <Transaction key={index} transaction={transaction} index={index} />
+                    )
                 })}
             </div>
         </div>
