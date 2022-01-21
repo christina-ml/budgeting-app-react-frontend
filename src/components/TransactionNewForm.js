@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
 export default function TransactionNewForm() {
@@ -14,19 +14,11 @@ export default function TransactionNewForm() {
         category: "",
     })
 
-    useEffect(()=>{
-        axios.get(`${process.env.REACT_APP_API_URL_FROM_OUR_BACKEND}/transactions/${id}`)
-            .then((res)=>{
-                setTransactions(res.data);
-            }).catch((err)=>{
-                console.log(err);
-            })
-    }, [])
-
     const handleTextChange = (event) => {
         setTransactions({ ...transactions, [event.target.id]: event.target.value })
     }
 
+    // `/transactions` CREATE-POST
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log("transactions:", transactions);
