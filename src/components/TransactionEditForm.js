@@ -85,7 +85,7 @@ export default function TransactionEditForm() {
                         placeholder="Category"
                         />
                 </div>
-                <label htmlFor="amount" className="col-sm-1 col-form-label">Amount:</label>
+                <label htmlFor="amount" className="col-sm-1 col-form-label">Amount: $</label>
                 <div className="col-sm-11">
                     <input 
                         id="amount"
@@ -95,7 +95,7 @@ export default function TransactionEditForm() {
                         placeholder="Amount"
                     />
                 </div>
-                <div className="col-sm-11">
+                <div className="col-cdsm-11">
                     <input type="submit" />   
                 </div>
             </form>
