@@ -1,8 +1,12 @@
-.nav {
-  padding-top: 5px;
-  background: #94ddd3;
+.App {
+  font-family:'Times New Roman', Times, serif;
 }
 
+.navbar {
+  padding-top: 5px;
+  background: #bae0c8;
+}
+ 
 #home-photo-container {
   height: 300px;
   overflow: auto;
@@ -10,4 +14,44 @@
 
 #home-photo {
   width: 98vw;
+} 
+
+/* for mobile */
+@media (max-width: 576px) {
+  .table {
+    display: grid;
+  }
+
+  .Transaction tr{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .navbar.p-2 {
+    display: grid;
+    grid-template-areas:
+    "logo budget-title ."
+    ". acct-total acct-total"
+    ". new-trans . "
+  }
+
+  #logo {
+    grid-area: logo;
+  }
+
+  #budget-title {
+    grid-area: budget-title;
+  }
+  
+  #acct-total {
+    grid-area: acct-total;
+  }
+
+  #new-trans {
+    grid-area: new-trans;
+  }
+
+  #nav-total {
+    font-size: px;
+  }
 }

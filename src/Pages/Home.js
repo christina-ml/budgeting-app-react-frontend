@@ -9,13 +9,16 @@ export default function Home() {
                 Welcome to Budgeting App!
             </div>
             <h3 className="me-auto b">
-            Ready to get started? 
-                <Link to="/transactions" style={{textDecoration: "none"}}>
-                    <Button>Click Here</Button>
-                </Link>
+                <span>
+                    Ready to get started?
+                    <Link to="/transactions" style={{textDecoration: "none"}}>
+                        <Button className="mx-2">Click Here</Button>
+                    </Link>
+                </span>
             </h3>
+            <br />
             <div id="home-photo-container">
-                <img id="home-photo" src="https://usalg.org/wp-content/uploads/2021/01/Budgeting-1.jpg" alt="budgeting-photo" />
+                <img className="w-60" id="home-photo" src="https://usalg.org/wp-content/uploads/2021/01/Budgeting-1.jpg" alt="budgeting" />
             </div>
         </div>
     )
