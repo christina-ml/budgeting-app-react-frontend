@@ -16,7 +16,7 @@ export default function TransactionDetails() {
             .then((res)=>{
                 setTransactions(res.data);
             }).catch((err)=>{
-                console.log(err)
+                navigate('/not-found')
             })
     }, []);
 
