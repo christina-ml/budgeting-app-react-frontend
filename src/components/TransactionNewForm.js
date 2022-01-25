@@ -1,9 +1,8 @@
 import axios from 'axios';
 import { useState } from 'react';
-import { useNavigate, useParams, Link } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 export default function TransactionNewForm() {
-    const { id } = useParams();
     const navigate = useNavigate();
 
     const [newTransaction, setnewTransaction] = useState({
