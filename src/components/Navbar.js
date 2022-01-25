@@ -1,5 +1,3 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 
@@ -8,30 +6,7 @@ import colorCodeDiv from '../helpers/colorCodeDiv';
 
 const API_URL = process.env.REACT_APP_API_URL_FROM_OUR_BACKEND;
 
-/* Page Refresh - to update amount in `Navbar` */
- function refreshPage() {
-    window.location.reload(false);
-  }
-
-export default function Navbar() {
-    const [transactions, setTransactions] = useState([]);
-    useEffect(()=>{
-        axios.get(`${API_URL}/transactions`)
-            .then((res)=>{
-                setTransactions(res.data);
-            }).catch((err)=>{
-                throw err;
-            })
-        }, []);
-  
-    /* Find the Bank Account Total (sum of transaction.amount) */
-    const numbersToAddArray = transactions.map((transaction)=>{
-        return transaction.amount;
-    })
-    const findSum = numbersToAddArray.reduce(function(a, b){
-        return a + Number(b);
-    }, 0);
-
+export default function Navbar({ total }) {
     return(
         <div className="navbar p-2">
            
@@ -48,10 +23,9 @@ export default function Navbar() {
                 <div>
                     <span>
                         <div>Bank Acct. Total:</div>
-                        <Button onClick={refreshPage} variant="outline-secondary" size="sm">Click to update!</Button>
                     </span>
                 </div>
-                {colorCodeDiv(findSum)}
+                {colorCodeDiv(total)}
             </div>
 
             <Link to="/transactions/new" id="new-trans">
