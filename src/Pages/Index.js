@@ -1,10 +1,10 @@
 import Transactions from "../components/Transactions";
 
-export default function Index({ setTotal, total }) {
+export default function Index() {
     return(
         <div className="p-2">
             {/* <h1>Index</h1> */}
-            <Transactions total={total} setTotal={setTotal} />
+            <Transactions />
         </div>
     )
 }

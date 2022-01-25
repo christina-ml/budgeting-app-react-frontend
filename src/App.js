@@ -1,6 +1,6 @@
 // Dependencies
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
 
 // Components
 import Navbar from './components/Navbar';
@@ -17,15 +17,13 @@ import FourOFour from './Pages/FourOFour';
 import './App.css';
 
 function App() {
-  const [total, setTotal] = useState(0);
-
   return (
     <div className="App">
-      <Navbar total={total} />
+      <Navbar />
       <main>
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/transactions" element={<Index total={total} setTotal={setTotal} />} />
+          <Route path="/transactions" element={<Index />} />
           <Route path="/transactions/new" element={<New />} />
           <Route path="/transactions/:id" element={<Show />} />
           <Route path="/transactions/:id/edit" element={<Edit />} />
