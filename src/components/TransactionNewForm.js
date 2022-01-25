@@ -6,7 +6,7 @@ export default function TransactionNewForm() {
     const { id } = useParams();
     const navigate = useNavigate();
 
-    const [transactions, setTransactions] = useState({
+    const [newTransaction, setnewTransaction] = useState({
         date: "",
         name: "",
         amount: "",
@@ -15,14 +15,14 @@ export default function TransactionNewForm() {
     })
 
     const handleTextChange = (event) => {
-        setTransactions({ ...transactions, [event.target.id]: event.target.value })
+        setnewTransaction({ ...newTransaction, [event.target.id]: event.target.value })
     }
 
     // `/transactions` CREATE-POST
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log("transactions:", transactions);
-        axios.post(`${process.env.REACT_APP_API_URL_FROM_OUR_BACKEND}/transactions`, transactions)
+        console.log("newTransaction:", newTransaction);
+        axios.post(`${process.env.REACT_APP_API_URL_FROM_OUR_BACKEND}/transactions`, newTransaction)
             .then((res)=>{
                 navigate(`/transactions`)
             }).catch((err)=>{
@@ -37,7 +37,7 @@ export default function TransactionNewForm() {
                 <div className="col-sm-11">
                 <input 
                     id="date"
-                    value={transactions.date}
+                    value={newTransaction.date}
                     type="text"
                     onChange={handleTextChange}
                     placeholder="Date"
@@ -49,7 +49,7 @@ export default function TransactionNewForm() {
                 <div className="col-sm-11">
                     <input 
                         id="name"
-                        value={transactions.name}
+                        value={newTransaction.name}
                         type="text"
                         onChange={handleTextChange}
                         placeholder="Name"
@@ -60,7 +60,7 @@ export default function TransactionNewForm() {
                 <div className="col-sm-11">
                     <textarea 
                         id="from"
-                        value={transactions.from}
+                        value={newTransaction.from}
                         type="text"
                         onChange={handleTextChange}
                         placeholder="From"
@@ -70,7 +70,7 @@ export default function TransactionNewForm() {
                 <div className="col-sm-11">
                     <input 
                         id="category"
-                        value={transactions.category}
+                        value={newTransaction.category}
                         type="text"
                         onChange={handleTextChange}
                         placeholder="Category"
@@ -80,7 +80,7 @@ export default function TransactionNewForm() {
                 <div className="col-sm-11">
                     <input 
                         id="amount"
-                        value={transactions.amount}
+                        value={newTransaction.amount}
                         type="number"
                         onChange={handleTextChange}
                         placeholder="Amount"
